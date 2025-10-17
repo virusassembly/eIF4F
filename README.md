@@ -1,18 +1,36 @@
 # eIF4F Molecular Dynamics Simulation
 
-# Version
-numpy 1.26.4
-gsd 2.9.0
-hoomd 3.5.0
+## Version Information
+- **NumPy:** 1.26.4  
+- **GSD:** 2.9.0  
+- **HOOMD-blue:** 3.5.0  
 
-## Set up parameter
-The parameter space is included in "parentparam.yml", the parameter could be either ON/OFF, or string or a list of values.
+---
 
-## Generate folder with given parameters
-Run
-$ py param.py parentparam.yml
+## Parameter Setup
+All simulation parameters are defined in the file **`parentparam.yml`**.
 
-It will iterate all parameters and generate folders with a json file included.
+Each parameter can take one of the following forms:
+- **Boolean:** `ON` / `OFF`
+- **String**
+- **List:** multiple possible values
+
+---
+
+## Generating folder with given parameters
+To generate simulation folders for all parameter combinations, run:
+
+```bash
+python param.py parentparam.yml
+
+This script iterates through all parameter combinations and creates corresponding folders.
+Each generated folder includes a JSON configuration file describing the selected parameters.
+```
+
+---
 
 ## Run simulation
-$./runscript.sh "folder name"
+To execute a simulation for a specific folder, use:
+```bash
+./runscript.sh "<folder_name>"
+```
