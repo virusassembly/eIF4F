@@ -22,10 +22,10 @@ To generate simulation folders for all parameter combinations, run:
 
 ```bash
 python param.py parentparam.yml
-
+```
 This script iterates through all parameter combinations and creates corresponding folders.
 Each generated folder includes a JSON configuration file describing the selected parameters.
-```
+
 
 ---
 
